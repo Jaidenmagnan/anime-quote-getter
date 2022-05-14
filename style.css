@@ -1,0 +1,49 @@
+:root {
+    --background: #302D41;
+    --secondary: #F5C2E7;
+    font-size: 26px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.container {
+    margin: auto;
+    margin-top: 5%;
+    width: 600px;
+    background-color: var(--secondary);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#title {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#get-quote {
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 600px;
+}
+button {
+    background-color: var(--secondary);
+
+}
+
+button:hover {
+    background-color: var(--background);
+    color: white;
+    cursor:grab;
+}
+
+#class-header {
+    color:white;
+    text-align: center;
+    margin-top: 10%;
+}

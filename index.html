@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Anime Fetcher</title>
+</head>
+<body>
+    <h1 id="class-header">Anime Quote's</h1>
+    <div class="container">
+   <button id="get-quote">GENERATE</button> 
+        <div class="information">
+            <h3 id="title"></h3>
+            <p id="quotations1" style="display: inline;"></p>
+            <p style = "display: inline" id="quote"></p>
+            <p id="quotations2" style="display: inline;"></p>
+            <br><br>
+            <p id="squiggle" style="display: inline;"></p>
+            <p style="display: inline;" id ="character"></p>
+        </div>
+   </div>
+</body>
+
+
+<script>
+var button = document.getElementById("get-quote");
+button.onclick = function () {
+    fetch('https://animechan.vercel.app/api/random')
+        .then(response => response.json())
+        .then(quote => {
+
+        console.log(quote);
+        document.getElementById("quotations1").innerHTML = '"';            
+        document.getElementById("quotations2").innerHTML = '"';            
+        document.getElementById("squiggle").innerHTML = '~';            
+        document.getElementById("title").innerHTML = quote['anime'];
+        document.getElementById("quote").innerHTML = quote['quote'];
+        document.getElementById("character").innerHTML = quote['character'];
+
+        })
+}
+</script>
+</html>
